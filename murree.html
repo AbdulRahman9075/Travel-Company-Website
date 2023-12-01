@@ -5,8 +5,103 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore Murree</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <h1 class = "text">Murree<h1>
+  <h1 class = "text">Murree</h1>
+
+
+  <!-- Company LOGO -->
+  <img src = "homeresources/logo.png"></img>
+
+
+
+
+  <!-- Top NavBar -->
+
+  <!-- Copy CSS from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_bar_h" -->
+  <div class="icon-bar">
+    <a class="active" href="home.html"><i class="fa fa-home"></i></a>
+    <div class= "subnav">
+    <a class= "subnavbutton" href="#"><i class="fa fa-globe"></i></a>
+      <div class= "subnav-content" <!--style = "display:none;"-->>
+        <a href="kaghan.html">Kaghan</a>
+        <a href="murree.html">Murree</a>
+        <a href="naran.html">Naran</a>
+        <a href="swat.html">Swat</a>
+      </div>
+    </div>
+  </div>
+  
+  <br><br><br><br>
+
+
+
+
+  <!-- Slideshow of Places in Muree -->
+  <!-- Copy CSS from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto" -->
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Sunset_in_hills_-_Holy_Trinity_Church%2C_Murree.jpg/250px-Sunset_in_hills_-_Holy_Trinity_Church%2C_Murree.jpg" style="width:100%" alt= "Holy Trinity Church">
+      <div class="text">Holy Trinity Church, Murree</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/GPO_Mall_Road_Murree.jpg/124px-GPO_Mall_Road_Murree.jpg" style="width:100%" alt = "Post Office, Murree">
+      <div class="text">General Post Office, Murree</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Murree_city.jpg/250px-Murree_city.jpg" style="width:100%" alt = "Murree Valley">
+      <div class="text">Murree Valley and Mall Road</div>
+    </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+  <br><br><br><br>
+
+
+  <!-- CONTENT ON THE PAGE -->
+
+  
+  <!-- Contact Us Section -->
+  <div class = "bottompage">
+    <div class = "contact">
+      <h2>Contact Us</h2>
+      <p>📍Shop: H13, 2nd Floor,<br>
+           Pegasus Mall,<br>
+           Tariq Road, Karachi<br><br><br>
+          ☎️ +92 284 3454222<br><br>
+          📧 adventuretravels@gmail.com 
+          <br><br><br>
+
+      </p>
+    </div>
+    <div class = "bottomnav">
+      <h2>Quick Navigation</h2>
+      <a href = "home.html">Home</a>
+      <a href = "murree.html">Murree</a><br>
+      <a href = "swat.html">Swat</a><br>
+      <a href = "naran.html">Naran</a><br>
+      <a href = "kaghan.html">Kaghan</a><br>
+    </div>
+  </div>
+
+
+
+  
+  <!-- JS SCRIPTS -->
+  <script>
+    runslideshow()
+  </script>
 </body>
 </html>
