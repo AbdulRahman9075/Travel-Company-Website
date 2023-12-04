@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,14 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  <h1 class = "text">Naran</h1>
+  <h1 class="text">Naran</h1>
 
 
 
   <!-- Company LOGO -->
-  <img src = "homeresources/logo.png"></img>
+  <img src="homeresources/logo.png"></img>
 
 
 
@@ -25,9 +27,9 @@
   <!-- Copy CSS from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_bar_h" -->
   <div class="icon-bar">
     <a class="active" href="home.html"><i class="fa fa-home"></i></a>
-    <div class= "subnav">
-    <a class= "subnavbutton" href="#"><i class="fa fa-globe"></i></a>
-      <div class= "subnav-content" <!--style = "display:none;"-->>
+    <div class="subnav">
+      <a class="subnavbutton" href="#"><i class="fa fa-globe"></i></a>
+      <div class="subnav-content" <!--style="display:none;" -->>
         <a href="kaghan.html">Kaghan</a>
         <a href="murree.html">Murree</a>
         <a href="naran.html">Naran</a>
@@ -40,34 +42,34 @@
 
 
 
-  
+
   <!-- Slideshow -->
   <!-- Copy CSS from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto" -->
-    <div class="slideshow-container">
+  <div class="slideshow-container">
 
     <div class="mySlides fade">
       <img src="homeresources/Slide1.png" style="width:100%">
-      <div class="text">Immerse yourself in<br>the Mesmerizing Beauty</div>
+      <div class="slidetext">Immerse yourself in<br>the Mesmerizing Beauty</div>
     </div>
 
     <div class="mySlides fade">
       <img src="homeresources/Slide2.png" style="width:100%">
-      <div class="text">Explore the Cultural Diversity</div>
+      <div class="slidetext">Explore the Cultural Diversity</div>
     </div>
 
     <div class="mySlides fade">
       <img src="homeresources/Slide3.png" style="width:100%">
-      <div class="text">Book your Trip Now</div>
+      <div class="slidetext">Book your Trip Now</div>
     </div>
 
-    </div>
-    <br>
+  </div>
+  <br>
 
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-    </div>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 
   <br><br><br><br>
 
@@ -77,28 +79,28 @@
 
 
   <!-- Contact Us Section -->
-  <div class = "bottompage">
-    <div class = "contact">
+  <div class="bottompage">
+    <div class="contact">
       <h2>Contact Us</h2>
-      <div class= "text">
+      <div class="text">
         <p>📍Shop: H13, 2nd Floor,<br>
-             Pegasus Mall,<br>
-             Tariq Road, Karachi<br><br><br>
-            ☎️ +92 284 3454222<br><br>
-            📧 adventuretravels@gmail.com 
-            <br><br><br>
+          Pegasus Mall,<br>
+          Tariq Road, Karachi<br><br><br>
+          ☎️ +92 284 3454222<br><br>
+          📧 adventuretravels@gmail.com
+          <br><br><br>
 
         </p>
       </div>
     </div>
-    <div class = "bottomnav">
+    <div class="bottomnav">
       <h2>Quick Navigation</h2>
-      <div class = "text">
-      <a href = "home.html">Home</a>
-      <a href = "murree.html">Murree</a><br>
-      <a href = "swat.html">Swat</a><br>
-      <a href = "naran.html">Naran</a><br>
-      <a href = "kaghan.html">Kaghan</a><br>
+      <div class="text">
+        <a href="home.html">Home</a>
+        <a href="murree.html">Murree</a><br>
+        <a href="swat.html">Swat</a><br>
+        <a href="naran.html">Naran</a><br>
+        <a href="kaghan.html">Kaghan</a><br>
       </div>
     </div>
   </div>
@@ -106,10 +108,29 @@
 
 
 
-  
+
   <!-- JS SCRIPTS -->
   <script>
-    runslideshow()
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
   </script>
 </body>
+
 </html>

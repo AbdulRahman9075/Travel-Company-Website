@@ -43,17 +43,17 @@
 
     <div class="mySlides fade">
       <img src="homeresources/Slide1.png" style="width:100%">
-      <div class="text">Immerse yourself in<br>the Mesmerizing Beauty</div>
+      <div class="slidetext">Immerse yourself in<br>the Mesmerizing Beauty</div>
     </div>
 
     <div class="mySlides fade">
       <img src="homeresources/Slide2.png" style="width:100%">
-      <div class="text">Explore the Cultural Diversity</div>
+      <div class="slidetext">Explore the Cultural Diversity</div>
     </div>
 
     <div class="mySlides fade">
       <img src="homeresources/Slide3.png" style="width:100%">
-      <div class="text">Book your Trip Now</div>
+      <div class="slidetext">Book your Trip Now</div>
     </div>
 
     </div>
@@ -106,7 +106,25 @@
 
   <!-- JS SCRIPTS -->
   <script>
-    runslideshow()
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
   </script>
 </body>
 </html>

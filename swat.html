@@ -45,18 +45,18 @@
     <div class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mahodand_Lake-Summer_2015.jpg/120px-Mahodand_Lake-Summer_2015.jpg" style="width:100%">
-      <div class="text">Mahodand Lake, Swat</div>
+      <img src="homeresources/Mahodand_Lake-Summer_2015.jpg" style="width:100%">
+      <div class="slidetext">Mahodand Lake, Swat</div>
     </div>
 
     <div class="mySlides fade">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nimogram_Stupa.jpg/120px-Nimogram_Stupa.jpg" style="width:100%">
-      <div class="text">Nemogram Stupa, Swat</div>
+      <img src="homeresources/Nimogram_Stupa.jpg" style="width:100%">
+      <div class="slidetext">Nemogram Stupa, Swat</div>
     </div>
 
     <div class="mySlides fade">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kalam_in_Swat_Pakistan_G.jpg/120px-Kalam_in_Swat_Pakistan_G.jpg" style="width:100%">
-      <div class="text">Kohistan Valley, Swat</div>
+      <img src="homeresources/Mingora_CitySwat_Valley.jpg" style="width:100%">
+      <div class="slidetext">Mingora, Swat</div>
     </div>
 
     </div>
@@ -158,7 +158,25 @@
   
   <!-- JS SCRIPTS -->
   <script>
-    runslideshow()
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
   </script>
 </body>
 </html>
