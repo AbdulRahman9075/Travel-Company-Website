@@ -4,15 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Kaghan</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Contact Us</title>
 </head>
 <body>
-  <h1 class = "text">Kaghan</h1>
-
-
-
   <!-- Company LOGO -->
   <img src = "homeresources/logo.png"></img>
 
@@ -36,43 +32,30 @@
   </div>
   <br><br><br><br>
 
+  
+  <!-- CONTACT FORM -->
+  <!-- See CSS for forms on "https://www.w3schools.com/howto/howto_css_contact_form.asp#:~:text=2)%20Add%20CSS%3A-,Example,-/*%20Style%20inputs%20with"  -->
+  <div class="container">
+    <form action="action_page.php">
 
+      <label for="fname">Name</label>
+      <input type="text" id="name" name="firstname" placeholder="Your  Name...">
 
-  <!-- Slideshow-->
-  <!-- Copy CSS from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto" -->
-    <div class="slideshow-container">
+      <label for="lname">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email ID...">
 
-    <div class="mySlides fade">
-      <img src="homeresources/Slide1.png" style="width:100%">
-      <div class="slidetext">Immerse yourself in<br>the Mesmerizing Beauty</div>
-    </div>
+      <label for="phone">Phone</label>
+      <input type="number" id="phone" name="phone" placeholder="Your Phone Number...">
 
-    <div class="mySlides fade">
-      <img src="homeresources/Slide2.png" style="width:100%">
-      <div class="slidetext">Explore the Cultural Diversity</div>
-    </div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+      <input type="submit" value="Submit">
 
-    <div class="mySlides fade">
-      <img src="homeresources/Slide3.png" style="width:100%">
-      <div class="slidetext">Book your Trip Now</div>
-    </div>
+    </form>
+  </div>
 
-    </div>
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-    </div>
-
-  <br><br><br><br>
-
-
-  <!-- CONTENT OF THE PAGE -->
-
-
-
+  
+  
   <!-- Contact Us Section -->
   <div class = "bottompage">
     <div class = "contact">
@@ -100,33 +83,5 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-  <!-- JS SCRIPTS -->
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 4000); // Change image every 4 seconds
-    }
-  </script>
 </body>
 </html>
