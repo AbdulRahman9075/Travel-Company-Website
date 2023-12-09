@@ -4,3 +4,5 @@ A basic travelling website created using HTML5, CSS3 and Javascript as a 1st sem
 HTML and Javascript by: @AbdulRahman9075
 
 CSS by: @Sadiq-Amin
+
+Deployed Link: https://adventravels.netlify.app/
